@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="heading" type="id" />
+    <item name="creditSpinner" type="id" />
+    <item name="gradeSpinner" type="id" />
+    <item name="courseName" type="id" />
+    <item name="textView2" type="id" />
+    <item name="currCG" type="id" />
+    <item name="textView3" type="id" />
+    <item name="compCredits" type="id" />
+    <item name="divider" type="id" />
+    <item name="button" type="id" />
+    <item name="divider2" type="id" />
+    <item name="myList" type="id" />
+    <item name="submit" type="id" />
+    <item name="copyright" type="id" />
+</resources>
