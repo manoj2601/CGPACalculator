@@ -10,31 +10,32 @@ An android app that calculates your CGPA and SGPA based on your previous CGPA, t
 
 ### Main Screen:
 * This is the main screen of the app. Users need to add their current CGPA and total earned credits till last semester (If you are in the first semester, then you must fill both with 0).  
-![Screen 1](./screens/1.jpg)  
+<img src="./screens/1.jpg" alt="Screen 1" style="height: 40%; width:40%;"/>  
   
-* Now User can add the course name as below. (Course name field is optional)  
-![Screen 2](./screens/2.jpg)  
+* Now User can add the course name as below. (Course name field is optional)
+<img src="./screens/2.jpg" alt="Screen 2" style="height: 40%; width:40%;"/>  
+<!-- ![Screen 2](./screens/2.jpg)   -->
   
 * Select the Credits from the drop down menu. (Range: 1-5)  
-![Screen 3](./screens/3.jpg)  
+<img src="./screens/3.jpg" alt="Screen 3" style="height: 40%; width:40%;"/>  
   
 * Select the Grade from the drop down menu. (Range: 4-10)  
-![Screen 4](./screens/4.jpg)  
+<img src="./screens/4.jpg" alt="Screen 4" style="height: 40%; width:40%;"/>  
   
 * Now click on `ADD COURSE` button. The course will be added and will look like this.  
-![Screen 5](./screens/5.jpg)  
+<img src="./screens/5.jpg" alt="Screen 5" style="height: 40%; width:40%;"/>  
   
 * Similarly you can add multiple courses like this:  
-![Screen 6](./screens/6.jpg)  
+<img src="./screens/6.jpg" alt="Screen 6" style="height: 40%; width:40%;"/>  
   
 * Click on `SUBMIT` and you will see your result below:
-![Screen 7](./screens/7.jpg)
+<img src="./screens/7.jpg" alt="Screen 7" style="height: 40%; width:40%;"/>  
   
 * If you want to update a course, long press on that course and you'll see the following options:
-![Screen 8](./screens/8.jpg)  
+<img src="./screens/8.jpg" alt="Screen 8" style="height: 40%; width:40%;"/>  
   
 * Click on `Delete Course`, if you want to delete the course. Click on `Edit Course` to edit course name, credit or grade, it will show like this, after the edit, again click on `ADD COURSE` to reflect the changes.
-![Screen 9](./screens/9.jpg)  
+<img src="./screens/9.jpg" alt="Screen 9" style="height: 40%; width:40%;"/>  
 
 
 
@@ -55,4 +56,5 @@ Outside Tech, I love to read, enjoy music and explore nature outdoors. If you ar
 <a href="https://twitter.com/ambivertidiot">![Twitter](https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)</a>
 
 
-* If you like it, please give it a star. If you want to give any suggestions for new features or want to report a bug, kindly create a token on this repository. To have a chat with me, message me on [gitter](https://gitter.im/manoj2601).
+* If you like it, please give it a **star** :star: .
+* If you want to give any suggestions for new features or want to report a bug, kindly create an **issue** on this repository. To have a chat with me, message me on [gitter](https://gitter.im/manoj2601).
