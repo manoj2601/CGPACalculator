@@ -1,4 +1,4 @@
-package io.github.manoj2601.cgpacalculator;
+package com.manoj.cgpacalculator;
 
 import org.junit.Test;
 

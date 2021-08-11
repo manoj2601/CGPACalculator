@@ -1,5 +1,8 @@
-package io.github.manoj2601.cgpacalculator;
+package com.manoj.cgpacalculator;
 
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -45,8 +48,8 @@ public class MainActivity extends AppCompatActivity{
 
         if(currCG.length()==0 && currCredit.length()==0)
         {
-            currCG = "8.081";
-            currCredit = "86";
+            currCG = "8.220";
+            currCredit = "100";
         }
 
         currCGPA = Double.parseDouble(currCG);

@@ -1,4 +1,4 @@
-package io.github.manoj2601.cgpacalculator;
+package com.manoj.cgpacalculator;
 
 import android.content.Context;
 import android.widget.ArrayAdapter;
@@ -35,4 +35,3 @@ public class myListAdapter extends ArrayAdapter<Course> {
 
     }
 }
-

@@ -1,4 +1,4 @@
-package io.github.manoj2601.cgpacalculator;
+package com.manoj.cgpacalculator;
 
 import android.content.Context;
 
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
     public void useAppContext() {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
-        assertEquals("io.github.manoj2601.cgpacalculator", appContext.getPackageName());
+        assertEquals("com.manoj.cgpacalculator", appContext.getPackageName());
     }
 }

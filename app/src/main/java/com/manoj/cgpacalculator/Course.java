@@ -1,4 +1,4 @@
-package io.github.manoj2601.cgpacalculator;
+package com.manoj.cgpacalculator;
 
 public class Course {
     private String courseName;
