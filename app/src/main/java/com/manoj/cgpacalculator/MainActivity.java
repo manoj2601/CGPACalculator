@@ -2,6 +2,8 @@ package com.manoj.cgpacalculator;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -29,6 +31,18 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity{
 
+    // creating constant keys for shared preferences.
+    public static final String SHARED_PREFS = "shared_prefs";
+
+    // key for storing email.
+    public static final String CURRCG_KEY = "currcg_key";
+
+    // key for storing password.
+    public static final String CURRCREDIT_KEY = "currcredit_key";
+
+    SharedPreferences sharedpreferences;
+    String currCG, currCredit;
+
     Button addbtn;
     ArrayList<Course> courses = new ArrayList<Course>();
     ListView show;
@@ -43,17 +57,17 @@ public class MainActivity extends AppCompatActivity{
         EditText currCG1 = (EditText) findViewById(R.id.currCG);
         EditText currCredit1 = (EditText) findViewById(R.id.compCredits);
 
-        String currCG = currCG1.getText().toString();
-        String currCredit = currCredit1.getText().toString();
+        String currCGS= currCG1.getText().toString();
+        String currCreditS = currCredit1.getText().toString();
 
-        if(currCG.length()==0 && currCredit.length()==0)
+        if(currCGS.length()==0 && currCreditS.length()==0)
         {
-            currCG = "8.220";
-            currCredit = "100";
+            currCGS = "8.139";
+            currCreditS = "115";
         }
 
-        currCGPA = Double.parseDouble(currCG);
-        currCredits = Double.parseDouble(currCredit);
+        currCGPA = Double.parseDouble(currCGS);
+        currCredits = Double.parseDouble(currCreditS);
         int totalCredits = 0;
         int credits = 0;
         for(int i=0; i<courses.size(); i++) {
@@ -68,13 +82,33 @@ public class MainActivity extends AppCompatActivity{
         double finalCGPA = ((double)totalCredits)/credits;
         DecimalFormat df = new DecimalFormat("#.###");
         String ret = "Final SGPA: "+ df.format(finalSGPA) + "\nFinal CGPA: "+df.format(finalCGPA) ;
-        Toast.makeText(MainActivity.this, ret, Toast.LENGTH_LONG).show();
+        Toast.makeText(MainActivity.this, ret, Toast.LENGTH_SHORT).show();
+        if(currCGS.compareTo(currCG)!=0 || currCreditS.compareTo(currCredit)!=0)
+        {
+            SharedPreferences.Editor editor = sharedpreferences.edit();
+            editor.putString(CURRCG_KEY, currCGS);
+            editor.putString(CURRCREDIT_KEY, currCreditS);
+            editor.apply();
+            currCG = currCGS;
+            currCredit = currCreditS;
+        }
+
     }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        sharedpreferences = getSharedPreferences(SHARED_PREFS, Context.MODE_PRIVATE);
+
+        currCG = sharedpreferences.getString(CURRCG_KEY, null);
+        currCredit = sharedpreferences.getString(CURRCREDIT_KEY, null);
+
+        EditText currCG1 = (EditText) findViewById(R.id.currCG);
+        EditText currCredit1 = (EditText) findViewById(R.id.compCredits);
+
+        currCG1.setText(currCG);
+        currCredit1.setText(currCredit);
 
 
         creditSpinner = findViewById(R.id.creditSpinner);
