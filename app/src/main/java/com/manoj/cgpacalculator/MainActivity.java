@@ -66,6 +66,7 @@ public class MainActivity extends AppCompatActivity{
             currCreditS = "115";
         }
 
+
         currCGPA = Double.parseDouble(currCGS);
         currCredits = Double.parseDouble(currCreditS);
         int totalCredits = 0;
@@ -83,7 +84,7 @@ public class MainActivity extends AppCompatActivity{
         DecimalFormat df = new DecimalFormat("#.###");
         String ret = "Final SGPA: "+ df.format(finalSGPA) + "\nFinal CGPA: "+df.format(finalCGPA) ;
         Toast.makeText(MainActivity.this, ret, Toast.LENGTH_SHORT).show();
-        if(currCGS.compareTo(currCG)!=0 || currCreditS.compareTo(currCredit)!=0)
+        if((currCG == null || currCGS.compareTo(currCG)!=0) || (currCredit == null || currCreditS.compareTo(currCredit)!=0))
         {
             SharedPreferences.Editor editor = sharedpreferences.edit();
             editor.putString(CURRCG_KEY, currCGS);
